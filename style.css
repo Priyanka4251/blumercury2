@@ -697,3 +697,28 @@ button:hover{
         font-size: 18px;
     }
 }
+/* ----------------------------------SLIDER PARA-------------------------------- */
+#P-slider{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.P-slide{
+    color: white;
+    text-align: center;
+    margin: auto;
+    animation: scroll 8s linear infinite;
+}
+.P-slide>p{
+    width: 150vw;
+    font-size: 12px;
+}
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+
+100% {
+transform: translate(calc(-250px * 3));
+}
+}

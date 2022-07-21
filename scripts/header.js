@@ -73,6 +73,21 @@ let header=()=>{
             <li> <i class="fa-solid fa-xmark" id="cross" onclick="P_crossFun()"></i></li>
         </ul>
     </div>
+    
+    <!-- ----------------------------slider------------------------------ -->
+    <div id="P-slider" style="width: 100vw; height: 30px; background-color: #3949ab; position: absolute;">
+    <div class="P-slide">
+    <p>FREE GIFTS WITH PURCHASE. BROWSE NOW</p>
+</div>
+<div class="P-slide">
+    <p>FREE SHIPPING FOR BLUEREWARDS MEMBERS</p>
+</div>
+<div class="P-slide">
+    <p>FREE SAMPLES WITH ALL ORDERS</p>
+    </div>
+    
+
+</div>
     `
 }
 

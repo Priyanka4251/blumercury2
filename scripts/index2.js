@@ -1,4 +1,7 @@
 function ShopPage(event){
+ 
+    document.querySelector("#P-slider").style.display="none";
+
     let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -69,6 +72,7 @@ divS.style.display="none";
     // document.querySelector("#shop").style.border="2px solid gray";
 }
 function ShopPage2(){
+    document.querySelector("#P-slider").style.display="flex";
     let div=document.querySelector(".page");
     div.style.display="none";
     let div2=document.querySelector("#pageDiv");
@@ -77,6 +81,7 @@ function ShopPage2(){
 }
 
 function NewPage(){
+    document.querySelector("#P-slider").style.display="none";
 let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -118,11 +123,13 @@ div.innerHTML=`
 
 }
 function NewPage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page2");
 div.style.display="none";
 }
 
 function BrandPage(){
+    document.querySelector("#P-slider").style.display="none";
 let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -184,11 +191,13 @@ div.innerHTML=`
 `
 }
 function BrandPage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page3");
 div.style.display="none";
 }
 
 function ExplorePage(){
+    document.querySelector("#P-slider").style.display="none";
 let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -227,11 +236,13 @@ div.innerHTML=`
 `
 }
 function ExplorePage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page4");
 div.style.display="none";
 }
 
 function EventsPage(){
+    document.querySelector("#P-slider").style.display="none";
 let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -258,11 +269,13 @@ div.innerHTML=`
 `
 }
 function EventsPage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page5");
 div.style.display="none";
 }
 
 function BluePage(){
+    document.querySelector("#P-slider").style.display="none";
 let divS=document.querySelector("#P-search-Div");
 divS.style.display="none";
 
@@ -292,6 +305,7 @@ div.innerHTML=`
 `
 }
 function BluePage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page6");
 div.style.display="none";
 }
@@ -302,6 +316,8 @@ divS.style.display="none";
 
 let div= document.querySelector(".page7");
 div.style.display="block";
+
+document.querySelector("#P-slider").style.display="none";
 
 div.innerHTML= `
 <div id="P-page7">
@@ -337,26 +353,31 @@ div.innerHTML= `
 `
 }
 function BeautyPage2(){
+    document.querySelector("#P-slider").style.display="flex";
 let div= document.querySelector(".page7");
 div.style.display="none";
 }
 // -------------------------------------------------------------------
 function P_SearchFun(){
+    document.querySelector("#P-slider").style.display="none";
     let div=document.querySelector("#P-search-Div");
     div.style.display="block";
     }
     function P_crossFun(){
+        document.querySelector("#P-slider").style.display="flex";
     let div=document.querySelector("#P-search-Div");
     div.style.display="none";
     }
     
 // ----------------------sidebar--------------------------------------
 function P_sidebarHam(){
+    document.querySelector("#P-slider").style.display="none";
     let div=document.querySelector("#sidebar");
     div.style.display="block"
     document.querySelector("body").style.background="#1111"
 }
 function P_sidebarCross(){
+    document.querySelector("#P-slider").style.display="flex";
     let div=document.querySelector("#sidebar");
     div.style.display="none";
     document.querySelector("body").style.background="white"
