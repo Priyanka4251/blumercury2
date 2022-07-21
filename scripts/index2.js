@@ -382,3 +382,13 @@ function P_sidebarCross(){
     div.style.display="none";
     document.querySelector("body").style.background="white"
 }
+
+// ------------------------------accept deccline-------------------------------------
+document.getElementById("btn1_P").addEventListener("click", Accept_Decline);
+
+document.getElementById("btn2_P").addEventListener("click", Accept_Decline);
+function Accept_Decline(){
+    let div=document.getElementById("P-footer2Box1");
+    div.style.display="none";
+    document.getElementById("P-footer_box1").style.margin="0";
+}
