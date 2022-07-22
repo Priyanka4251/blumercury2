@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dummy product page</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #P_container{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    #P_container>div>img{
+        width: 100%;
+        height: 222px;
+    }
+</style>
+<body>
+    <div id="P_container"></div>
+</body>
+</html>
+
+<script>
+
+let url='http://makeup-api.herokuapp.com/api/v1/products.json'
+    async function getData(){
+        let res=await fetch(url);
+        let data=await res.json();
+        append(data);
+        console.log(data);
+    }
+     getData();
+
+    //  data.forEach(({image_link, name, price, brand, id, description})
+
+    let append=(data, container)=>{
+        data.forEach((data,index)=>{
+            let img= document.createElement("img");
+            img.src=data.image_link;
+            img.addEventListener("click", function(){
+                imgClickedFun(data);
+            })
+
+            let name1=document.createElement("p");
+            name1.innerText=`Product: ${data.name}`;
+            
+
+            let price1=document.createElement("p");
+            price1.innerText=`Price: ${data.price}$`;
+
+            let brand1=document.createElement("p");
+            brand1.innerText=`Brand: ${data.brand}`;
+
+            let desc=document.createElement("p");
+            desc.innerText=`Description: ${data.description}`;
+
+            let div=document.createElement("div");
+            div.append(img, brand1, name1, price1, desc);
+
+            document.querySelector("#P_container").append(div);
+
+        })
+    }
+
+    let P_arr=[];
+    function imgClickedFun(data){
+        
+        P_arr.push(data)
+        localStorage.setItem("set1", JSON.stringify(P_arr));
+        // console.log(arr)
+        window.location.replace("product_show_page.html");
+    }
+
+</script>
